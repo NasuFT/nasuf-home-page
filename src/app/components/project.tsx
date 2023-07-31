@@ -2,8 +2,7 @@ import { Box, Heading, Text, Link, Stack, Badge } from "@chakra-ui/react";
 import NextLink from "next/link";
 import { quattrocento } from "../fonts";
 import { ReactMarkdown } from "react-markdown/lib/react-markdown";
-import { StaticImageData } from "next/image";
-import Image from "./image";
+import { Image } from "../components/image";
 
 export function Project({
   title,
@@ -17,7 +16,7 @@ export function Project({
   title: string;
   description: string;
   link: string;
-  img: StaticImageData;
+  img: string;
   className?: string;
   skills: string[];
   id: string;
@@ -27,10 +26,9 @@ export function Project({
       <Image
         src={img}
         alt="Project"
-        placeholder="blur"
-        w={24}
-        h={24}
-        p={2}
+        width={24}
+        height={24}
+        padding={2}
         float="left"
       />
       <Link as={NextLink} href={link} color="black">

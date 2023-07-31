@@ -1,8 +1,6 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import { getImage } from "./image";
-import { StaticImageData } from "next/image";
 
 const projectsDirectory = path.join(process.cwd(), "src", "app", "projects");
 
@@ -13,7 +11,7 @@ export interface Project {
   link: string;
   skills: string[];
   description: string;
-  img: StaticImageData;
+  img: string;
 }
 
 export function getProjects() {
@@ -29,7 +27,6 @@ export function getProjects() {
     return {
       id,
       ...matterResult.data,
-      img: getImage(id),
       description: matterResult.content,
     };
   }) as Project[];

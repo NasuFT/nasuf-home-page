@@ -2,6 +2,7 @@ import { Box, Heading, Stack } from "@chakra-ui/react";
 import { Project } from "./project";
 import { quattrocento } from "../fonts";
 import { Project as ProjectData } from "../lib/projects";
+import { useEffect } from "react";
 
 export function Projects({
   className,

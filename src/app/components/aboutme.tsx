@@ -5,7 +5,7 @@ export function AboutMe({ className }: { className?: string }) {
   return (
     <Box className={className} h="min-content" overflow="hidden">
       <Avatar
-        src=""
+        src="https://raw.githubusercontent.com/NasuFT/nasuft.github.io/main/src/app/assets/profilepic.jpg"
         m={4}
         size="xl"
         className="float-left"
