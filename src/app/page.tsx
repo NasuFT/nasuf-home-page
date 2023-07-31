@@ -1,9 +1,8 @@
-import Image from 'next/image'
+import { HomeComponent } from "./components/main";
+import { getProjects } from "./lib/projects";
 
 export default function Home() {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      
-    </main>
-  )
+  const projects = getProjects();
+
+  return <HomeComponent projects={projects} />;
 }
