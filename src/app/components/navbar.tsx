@@ -1,5 +1,4 @@
-import { Icon } from "@chakra-ui/icon";
-import { Center, Flex } from "@chakra-ui/layout";
+import { Center, Flex, Icon } from "@chakra-ui/react";
 import { FaGithub, FaLinkedin } from "react-icons/fa6";
 
 export function NavBar() {
